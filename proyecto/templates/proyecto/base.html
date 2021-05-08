@@ -7,6 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hola soy el base</h1>
+
+    {% block content %}
+       
+    {% endblock %}
+    <ul>
+        <li>
+            <a href="{% url 'Inicio' %}">Inicio</a>
+        </li>
+        <li>
+            <a  href="{% url 'Proyectos' %}">Proyectos</a>
+        </li>
+        <li>
+            <a href="{% url 'Contacto' %}">Contacto</a>
+        </li>
+        
+    </ul>
 </body>
 </html>
