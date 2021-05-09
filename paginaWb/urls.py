@@ -16,13 +16,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from proyecto import views
+from django.conf.urls.static import static
+from django.conf import settings
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.hola,name="Inicio"),
     #path('contacto/', views.contacto,name="Contacto"),
     path('contacto/',include('contacto.urls')), # Traiga todas las urls del proyecto ProyectoWebApp
+    path('proyectos/',include('proyectos.urls')), # Traiga todas las urls del proyecto ProyectoWebApp
 
-    path('proyectos/', views.proyectos,name="Proyectos"),
+    #path('proyectos/', views.proyectos,name="Proyectos"),
     path('experiencia/', views.experiencia,name="Experiencia"),
 
 ]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
