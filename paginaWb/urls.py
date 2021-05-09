@@ -28,7 +28,6 @@ urlpatterns = [
     path('experiencia/',include('experiencia.urls')),
     #path('proyectos/', views.proyectos,name="Proyectos"),
     #path('experiencia/', views.experiencia,name="Experiencia"),
-    path('certificaciones/',include('certificaciones.urls')),
 
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
