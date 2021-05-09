@@ -1,0 +1,23 @@
+{% extends "proyecto/base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row" style="padding-top: 20px;  display: flex; justify-content: center;width: 100%;">
+        {% for experiencia in experiencias %}
+            <div class="col-sm-8">
+                <div class="card"style="width: 100%; margin:5px 5px; padding-left: 25px; padding-bottom:25px">
+                    <img src="{{experiencia.imagen.url}}" alt="" class="card-img-top" style="width: 25%;">
+                    <div class="card-title">
+                        <a href="{{experiencia.url}}" target="blank" ><h2>{{experiencia.empresa}}</h2></a>
+                    </div>
+                    <h6>{{experiencia.inicio}} - {{experiencia.fin}}</h6>
+                    <h3 class="card-subtitle mb-2 text-muted " style="padding-top: 20px;">{{experiencia.cargo}}</h6>
+                    <p class="card-text" style="font-size: 20px; padding-left: 2px; padding-top: 20px;">{{experiencia.contenido}}</p>
+
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+</div>
+{% endblock %}

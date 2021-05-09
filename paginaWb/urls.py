@@ -25,9 +25,9 @@ urlpatterns = [
     #path('contacto/', views.contacto,name="Contacto"),
     path('contacto/',include('contacto.urls')), # Traiga todas las urls del proyecto ProyectoWebApp
     path('proyectos/',include('proyectos.urls')), # Traiga todas las urls del proyecto ProyectoWebApp
-
+    path('experiencia/',include('experiencia.urls')),
     #path('proyectos/', views.proyectos,name="Proyectos"),
-    path('experiencia/', views.experiencia,name="Experiencia"),
+    #path('experiencia/', views.experiencia,name="Experiencia"),
 
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

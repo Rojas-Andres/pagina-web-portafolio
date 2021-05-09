@@ -4,5 +4,3 @@ from django.shortcuts import render,HttpResponse
 def hola(req):
     return render(req,"proyecto/home.html",{"hola":["asdas","Adsa"]})
 
-def experiencia(req):
-    return render(req,"proyecto/experiencia.html",{"hola":["asdas","Adsa"]})
