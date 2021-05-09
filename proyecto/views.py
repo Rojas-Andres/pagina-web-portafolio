@@ -8,3 +8,5 @@ def contacto(req):
 
 def proyectos(req):
     return render(req,"proyecto/proyectos.html",{"hola":["asdas","Adsa"]})
+def experiencia(req):
+    return render(req,"proyecto/experiencia.html",{"hola":["asdas","Adsa"]})
