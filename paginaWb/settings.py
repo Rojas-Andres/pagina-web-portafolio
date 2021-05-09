@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'contacto',
     'proyectos',
     'experiencia',
+    'certificaciones',
 ]
 
 MIDDLEWARE = [
